@@ -1,5 +1,5 @@
 import React from 'react';
-import Text from "Components/Text.jsx";
+import { Text } from "Components/Text.jsx";
 import { someText } from "./services/someText";
 
 const App = () => {
