@@ -1,14 +1,14 @@
 import React from 'react';
-import { Text } from "Components/Text.jsx";
-import { someText } from "./services/someText";
+// import { Text } from "Components/Text.jsx";
+import {Text} from "./components/Text.jsx"
+import { phraseForComponent } from "./services/someText";
 
-const App = () => {
+export const App = () => {
     return (
-        <>
-            <h2>{someText('Hello!')}</h2>
+        <div>
+            <h2>{phraseForComponent('Hello!')}</h2>
             <Text/>
-        </>
+        </div>
     );
 }
 
-export default App;

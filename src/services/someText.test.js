@@ -1,5 +1,5 @@
-import { someText } from "./someText";
+import { phraseForComponent } from "./someText";
 
 test(`adds string to equal You say:string`, () => {
-    expect(someText('Hello people')).toBe('You say: Hello people');
+    expect(phraseForComponent('Hello people')).toBe('You say: Hello people');
 });

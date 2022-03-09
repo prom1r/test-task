@@ -1,3 +1,3 @@
-export const someText = (str) => {
+export const phraseForComponent = (str) => {
     return `You say: ${str}`
 }
