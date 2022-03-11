@@ -1,13 +1,10 @@
 const path = require("path");
 
 module.exports = {
-  entry: {
-    app: "./src/index.js",
-  },
+  entry: ["regenerator-runtime/runtime.js", "./src/index.js"],
   output: {
-    filename: "[name].js",
-    path: path.resolve(__dirname, "../dist"),
-    publicPath: "/dist",
+    path: path.resolve(__dirname, "build"),
+    filename: "main.bundle.js",
   },
   module: {
     rules: [
@@ -17,6 +14,7 @@ module.exports = {
         use: {
           loader: "babel-loader",
         },
+
       },
     ],
   },

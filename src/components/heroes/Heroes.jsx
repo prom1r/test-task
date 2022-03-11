@@ -1,9 +1,17 @@
 import React from "react";
 import members from "../../../heroes.json";
-import { HeroesHeader } from "../heroes/HeroesHeader.jsx";
+import { TitleTable } from "../TitleTable.jsx";
 
 export const Heroes = () => {
   const { members: heroes } = members;
+
+  const heroesColumnName = [
+    "№:",
+    "Name:",
+    "Age:",
+    "SecretIdentity:",
+    "Powers:",
+  ];
 
   let res = heroes.map((hero, index) => {
     return (
@@ -20,7 +28,7 @@ export const Heroes = () => {
   if (heroes.length > 0) {
     return (
       <table>
-        <HeroesHeader />
+        <TitleTable title={heroesColumnName} />
         <tbody>{res}</tbody>
       </table>
     );
