@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { useSelector, useDispatch } from "react-redux";
 import { taskCreate } from "../../redux/actions";
 import uniqid from "uniqid";
+import { SingleTask } from "Components/todo/SingleTask.jsx";
 
 export const Todo = () => {
   const [text, setText] = useState("");
@@ -26,6 +27,12 @@ export const Todo = () => {
       <div>
         <input type="text" onChange={handleChange} value={text} />
         <button onClick={handleCreate}>Add</button>
+      </div>
+      <div>
+        {!!tasks.length &&
+          tasks.map((task) => {
+            return <SingleTask key={task.id} text={task.text} />;
+          })}
       </div>
     </div>
   );
