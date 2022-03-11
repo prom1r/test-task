@@ -1,4 +1,7 @@
+@import "./variables/variables.scss";
+
 body {
   font-size: 20pt;
-  color: darkgrey;
+  color: $primary-color;
+  background-color: $main-bg;
 }

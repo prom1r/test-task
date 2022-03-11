@@ -1,7 +1,10 @@
+@import "variables/variables.scss";
+
 td {
-    color: olivedrab;
-    font-weight: bold;
-    padding-right: 20px;
+    color: red;
+    font-weight: $weight-bolt;
+    padding-right: $padding-right;
+    border: $border-table;
   }
 
 
