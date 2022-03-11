@@ -1,4 +1,5 @@
 import React from "react";
+import "../sass/table.scss";
 
 export const TitleColumn = ({ title }) => {
   const ucFirst = (str) => {
@@ -6,9 +7,5 @@ export const TitleColumn = ({ title }) => {
     return str[0].toUpperCase() + str.slice(1);
   };
 
-  return (
-    <td style={{ fontWeight: "bold", paddingRight: "20px" }}>
-      {ucFirst(title)}
-    </td>
-  );
+  return <td>{ucFirst(title)}</td>;
 };
