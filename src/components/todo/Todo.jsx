@@ -17,9 +17,13 @@ export const Todo = () => {
   };
 
   const handleCreate = () => {
-    const id = uniqid();
-    dispatch(taskCreate(text, id));
-    setText("");
+    if (text) {
+      const id = uniqid();
+      dispatch(taskCreate(text, id));
+      setText("");
+    } else {
+      alert("please enter text");
+    }
   };
 
   return (
@@ -31,7 +35,7 @@ export const Todo = () => {
       <div>
         {!!tasks.length &&
           tasks.map((task) => {
-            return <SingleTask key={task.id} text={task.text} />;
+            return <SingleTask key={task.id} task={task} />;
           })}
       </div>
     </div>
